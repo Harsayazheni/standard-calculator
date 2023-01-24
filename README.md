@@ -38,130 +38,126 @@ Validate the HTML and CSS code.
 
 ## PROGRAM :
 ```
-<!DOCTYPE html>
+.container{
+    text-align: center;
+    margin-top:23px
+}
+
+table{
+    margin: auto;
+}
+
+input{
+    border-radius: 21px;
+    border: 5px solid #244624;
+    font-size:34px;
+    height: 65px;
+    width: 456px;
+}
+
+button{
+    border-radius: 20px;
+    font-size: 40px;
+    background: #978fa0;
+    width: 102px;
+    height: 90px;
+    margin: 6px;
+}
+
+.calculator{ 
+    border: 4px solid #13695d;
+    background-color: #ff99f7;
+    padding: 23px;
+    border-radius: 53px;
+    display: inline-block;
+    
+}
+
+h1{
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+}
+[3:44 am, 25/01/2023] Pavi Aids: let screen = document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+let screenValue = '';
+for (item of buttons) {
+    item.addEventListener('click', (e) => {
+        buttonText = e.target.innerText;
+        console.log('Button text is ', buttonText);
+        if (buttonText == 'X') {
+            buttonText = '*';
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+        else if (buttonText == 'C') {
+            screenValue = "";
+            screen.value = screenValue;
+        }
+        else if (buttonText == '=') {
+            screen.value = eval(screenValue);
+        }
+        else {
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+
+    })
+}
+[3:44 am, 25/01/2023] Pavi Aids: <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport"
-        content="width=device-width,initial-scale=1.0">
-        <style>
-        
-        .bookpage{
-          width: 400px;
-          height: 600px;
 
-          color:blueviolet;
-          margin-left: auto;
-          margin-right: auto;
-          padding: 20px;
-          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-          background-image:url(/static/images/images.jpeg);
-          background-size: cover;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <title>Calculator</title>
+</head>
 
-        }
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
 
-        .insight{
-            color:white;
-
-
-        }
-
-        .hrstyle{
-            width: 30px;
-
-        }
-        .author{
-            color:yellowgreen;
-            display: inline;
-            position: relative;
-            color: red;
-            top: 190px;
-
-
-            font-family: Georgia;
-            font-size: medium;
-
-        }
-
-        .booktitle{
-            font-family: 'Courier New', Courier, monospace;
-            font-size: large;
-            text-align: inherit;
-            position: relative;
-            top: 30px;
-
-        }
-        .id{
-            width: 400px;
-            position: relative;
-            top: 180px;
-
-
-        }
-        .pub{
-            font-size: medium;
-            position: relative;
-            top: 155px;
-            left: 330px;
-        }
-        .ed{
-            color:pink;
-            font-size: large;
-            font-family: Verdana;
-            position: relative;
-            top: 65px;
-
-        }
-        .subtitle{
-            font-family: Tahoma;
-            font-size: medium;
-            position: relative;
-            top: 10px;
-
-        }
-        .mypic{
-            position: relative;
-            top: 220px;
-            left: 320px;
-            width: 100px;
-            height: 100px;
-            background-size: cover;
-
-        }
-        </style>
-        <title>Book Cover Page</title>
-    </head>
-    <body>
-        <div class="bookpage">
-            <div class="insight">
-                EXPERT INSIGHT
-            </div>
-            <div class="hrstyle">
-                <hr style="color:white;">
-            </div>
-            <div class="booktitle">
-                <h1> Responsive Web Design with HTML5 and CSS </h1></div>
-            <div class="subtitle">
-                Develop future-proof responsive websites using the latest  HTML5 and CSS techniques
-            </div>
-            <div class="mypic">
-                <img src="/static/images/my.jpeg" width=" 65" height="70"alt="">
-            </div>
-            <div class="id">
-                <hr style="color:blue;">
-            </div>
-            <div class="author">
-                <p><b>Harsha</b></p>
-            </div>
-            <div class="pub">
-                Packt>
-            </div>
-            <div class="ed">
-                <b>Third Edition</b>
-            </div>
-
-
+        <div class="calculator">
+            <input type="text" name="screen" id="screen">
+            <table>
+                <tr>
+                    <td><button>(</button></td>
+                    <td><button>)</button></td>
+                    <td><button>C</button></td>
+                    <td><button>%</button></td>
+                </tr>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>X</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button>0</button></td>
+                    <td><button>.</button></td>
+                    <td><button>/</button></td>
+                    <td><button>=</button></td>
+                </tr>
+            </table>
         </div>
-    </body>
+    </div>
+
+</body>
+<script src="/static/JS/index.js"></script>
+
 </html>
 ```
 
