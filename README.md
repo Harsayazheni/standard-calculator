@@ -5,7 +5,7 @@
 To develop a website to display the cover page design of a book
 
 
-Design Steps:
+## Design Steps:
 
 
 Step 1:
@@ -32,7 +32,7 @@ Step 5:
 
 Add images and other contents using CSS record a screenshot of it
 
-### Step 6:
+Step 6:
 
 Validate the HTML and CSS code.
 
@@ -103,7 +103,7 @@ for (item of buttons) {
 
     })
 }
-[3:44 am, 25/01/2023] Pavi Aids: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
