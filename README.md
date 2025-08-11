@@ -77,7 +77,7 @@ h1{
     font-size: 28px;
     font-family: 'Courier New', Courier, monospace;
 }
-[3:44 am, 25/01/2023] Pavi Aids: let screen = document.getElementById('screen');
+let screen = document.getElementById('screen');
 buttons = document.querySelectorAll('button');
 let screenValue = '';
 for (item of buttons) {
