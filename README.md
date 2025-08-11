@@ -2,7 +2,7 @@
 
 ## AIM:
 
-To develop a website to display the cover page design of a book
+To design a web application for a standard calculator.
 
 
 ## Design Steps:
@@ -170,4 +170,4 @@ for (item of buttons) {
 ![](./valid1.jpeg)
 
 ## Result:
-The program for designing book cover page using HTML and CSS is executed successfully.
+The program for designing a web application for calculator using HTML, CSS and JS and validate the HTML is done successfully.
